@@ -73,14 +73,14 @@ def main():
 
     # Query players table
     query_players(session, player_id)
-    
     # Query players_add_info table
     query_players_add_info(session, player_id)
-    
     # Query joined tables
     query_joined_tables(session, player_id)
-
+    # Query select 5 column
     query_and_print_results(session)
+
+    session.close()
 
 if __name__ == '__main__':
     main()
