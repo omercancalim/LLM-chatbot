@@ -2,3 +2,6 @@ psycopg2-binary
 python-dotenv
 sqlalchemy
 google-cloud-sql-connector[pg8000]
+langchain-google-vertexai
+langchain
+langchain_community
