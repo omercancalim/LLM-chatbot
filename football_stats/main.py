@@ -3,13 +3,12 @@ import sqlalchemy
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from config import DATABASE, GOOGLE_APPLICATION_CREDENTIALS
-from langchain_google_vertexai import ChatVertexAI
 from langchain_google_vertexai import VertexAI
 
 # Create the database URL
 DATABASE_URL = f"postgresql+psycopg2://{DATABASE['user']}:{DATABASE['password']}@{DATABASE['host']}:{DATABASE['port']}/{DATABASE['name']}"
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:\\Users\\remca\\OneDrive\\Masaüstü\\silicon-pattern-428808-d2-507e65a3ec48.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = GOOGLE_APPLICATION_CREDENTIALS
 
 # Create the SQLAlchemy engine
 engine = create_engine(DATABASE_URL)
